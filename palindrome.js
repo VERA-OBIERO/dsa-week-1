@@ -1,10 +1,12 @@
-x=12345;
 function palindrome(x){
     let stringx = x.toString();
     let arrayDigits = stringx.split('');
     let reversedArrayDigits = arrayDigits.reverse();
     let reversedStringx = reversedArrayDigits.join('');
-    let reversedx = parseInt(reversedStringx, 10);
-    return reversedx
+    if (x == reversedStringx){
+        return true
+    }else{
+        return false
+    }
 }
-console.log(palindrome(x))
+console.log(palindrome("mom"))
